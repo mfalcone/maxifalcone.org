@@ -7,7 +7,7 @@ import {
 import '../sass/header.scss';
 import '../sass/general.scss';
 
-const Header = () => {
+const Header = ({basename}) => {
     const absPath = `${window.location.origin}${window.template_path}`;
     console.log(absPath)
     return (
@@ -16,7 +16,7 @@ const Header = () => {
                 <header className='border-bottom border-dark'>
                     <Row>
                         <Col md={{ size: 9, offset: 3 }} className='text-end pe-2'>
-                            <h1>maxiFalcone.<span className='rosa'>org</span></h1>
+                            <h1><a href={basename}>maxiFalcone.<span className='rosa'>org</span></a></h1>
                         </Col>
                     </Row>
                     <Row>

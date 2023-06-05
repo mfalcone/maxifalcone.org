@@ -1,4 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./variables.scss";
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -10,7 +12,16 @@ header {
 
     h1 {
         font-weight: 400;
-
+        a{
+            color: #000;
+            text-decoration: none;
+            &:hover{
+                color: $violeta;
+                .rosa{
+                    color: $azul;
+                }
+            }
+        }
         @media (min-width: 12px) and (max-width: 280px) {
             font-size:2em;
         }

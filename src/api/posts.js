@@ -15,7 +15,7 @@ export const getAllPosts = async() => {
 }
 
 export const getSinglePost = async(slug) => {
-    const response = await client.get(`?searh=${slug}`);
+    const response = await client.get(`?slug=${slug}`);
     if(response.status !== 200) {
         // oups! something went wrong
         return;
