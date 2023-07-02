@@ -23,3 +23,13 @@ export const getSinglePost = async(slug) => {
 
     return response.data;
 }
+
+export const getAllCategories = async() => {
+    const response = await axios.get('/maxifalcone.org/wp-json/wp/v2/categories?per_page=100')
+    if(response.status !== 200) {
+        // oups! something went wrong
+        return;
+    }
+
+    return response.data;
+}

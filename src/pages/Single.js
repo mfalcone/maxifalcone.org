@@ -18,9 +18,8 @@ const Single = () => {
     }, [])
 
     return (
-        <Container>
+        <>
             {post && <>
-                <Col className="border-dark border-start" md={{size:9, offset: 3}}>
                 <Row className='post-wrapper'>
                     <Col className='position-relative'>
                         <h2>{post.title.rendered}</h2>
@@ -45,9 +44,8 @@ const Single = () => {
                         <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
                     </Col>
                 </Row>
-                </Col>
             </>}
-        </Container>
+        </>
     );
 };
 
